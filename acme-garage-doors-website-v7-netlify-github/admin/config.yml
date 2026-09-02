@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    description: "Completed garage door installations and project highlights."
+    files:
+      - name: "projects"
+        label: "Projects"
+        file: "data/projects.json"
+        format: "json"
+        fields:
+          - name: "items"
+            label: "Projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "location", label: "Location", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "mediaType", label: "Media type", widget: "select", options: ["image", "video"], default: "image" }
+              - name: "image"
+                label: "Project image"
+                widget: "image"
+                required: false
+                hint: "Choose this when Media type is image."
+              - name: "video"
+                label: "Project video"
+                widget: "file"
+                required: false
+                media_library:
+                  config:
+                    choose_url: false
+                hint: "Choose an MP4 video when Media type is video."
+              - { name: "poster", label: "Video poster image", widget: "image", required: false, hint: "Optional image shown before a video plays." }
+              - { name: "alt", label: "Image alt text", widget: "string" }
+              - { name: "featured", label: "Featured", widget: "boolean", default: false }
+
+  - name: "blog"
+    label: "Blog"
+    description: "Helpful garage door advice and local service updates."
+    files:
+      - name: "posts"
+        label: "Blog posts"
+        file: "data/blog.json"
+        format: "json"
+        fields:
+          - name: "items"
+            label: "Posts"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "date", label: "Publish date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { name: "category", label: "Category", widget: "string", default: "Garage door advice" }
+              - { name: "excerpt", label: "Excerpt", widget: "text" }
+              - { name: "body", label: "Article", widget: "markdown" }
+              - { name: "featuredImage", label: "Featured image", widget: "image", required: false }
+              - { name: "published", label: "Published", widget: "boolean", default: true }

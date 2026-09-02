@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+[build.processing.html]
+  pretty_urls = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
