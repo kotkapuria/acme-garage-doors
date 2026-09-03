@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "title": "Double garage door installation",
+      "location": "Niagara Region",
+      "description": "A completed residential garage door installation with a clean, durable finish.",
+      "image": "/images/installation-2.jpg",
+      "alt": "Completed double garage door installation on a Niagara-area home",
+      "featured": true
+    },
+    {
+      "title": "Modern garage door installation",
+      "location": "Niagara Region",
+      "description": "A modern garage door installation selected to complement the home's exterior.",
+      "image": "/images/installation-3.jpeg",
+      "alt": "Completed modern garage door installation",
+      "featured": true
+    }
+  ]
+}
