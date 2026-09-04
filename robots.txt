@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://acmegaragedoors.ca/sitemap.xml
+Disallow: /admin/
+Disallow: /data/
+
+Sitemap: https://www.acmegaragedoors.ca/sitemap.xml
