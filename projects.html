@@ -10,9 +10,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index" aria-label="Acme Garage Doors home"><img class="brand-logo" src="images/ACME%20logo%20round.png" alt="Acme Garage Doors"></a><nav class="nav" aria-label="Main navigation"><a href="index#services">Services</a><a href="projects">Projects</a><a href="blog">Blog</a><a href="index#quote">Free Quote</a></nav><a class="nav-phone" href="tel:+12897838146">289-783-8146</a></div></header>
-<main><section class="page-hero"><div class="container"><div class="eyebrow">OUR WORK · NIAGARA REGION</div><h1>Garage door projects</h1><p>Explore completed residential garage door installations by Acme Garage Doors.</p></div></section><section class="section cms-section"><div class="container"><div class="cms-grid" id="projects-list"><p>Loading projects...</p></div></div></section></main>
-<footer><div class="container footer-grid"><div class="footer-brand brand"><img class="brand-logo" src="images/ACME%20logo%20round.png" alt="Acme Garage Doors"></div><div><p>Garage door sales, installation & repairs<br>Niagara Region, Ontario, Canada</p></div><div class="footer-contact"><a href="tel:+12897838146">289-783-8146</a><a href="mailto:acmegd.11@gmail.com">acmegd.11@gmail.com</a></div></div></footer>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index" aria-label="Acme Garage Doors home"><img class="brand-logo" src="images/ACME%20logo%20round.png" alt="Acme[...]
+<div class="nav-contact">
+  <a class="nav-phone" href="tel:+12897838146"><span>Call</span> 289-783-8146</a>
+  <a class="nav-email" href="mailto:acmegd.11@gmail.com"><span>Email</span> acmegd.11@gmail.com</a>
+</div>
+<main><section class="page-hero"><div class="container"><div class="eyebrow">OUR WORK · NIAGARA REGION</div><h1>Garage door projects</h1><p>Explore completed residential garage door installations[...]
+<footer><div class="container footer-grid"><div class="footer-brand brand"><img class="brand-logo" src="images/ACME%20logo%20round.png" alt="Acme Garage Doors"></div><div><p>Garage door sales, ins[...]
+<div class="footer-contact"><a href="tel:+12897838146">289-783-8146</a><a href="mailto:acmegd.11@gmail.com">acmegd.11@gmail.com</a><a href="https://maps.app.goo.gl/FfW46pLaCwa87yC1A" target="[...]
 <script>
   fetch('data/projects.json').then(response => response.json()).then(data => {
     document.getElementById('projects-list').innerHTML = data.items.map(project => {
